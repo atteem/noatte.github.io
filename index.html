@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv"> <!-- Changed lang="en" to lang="sv" -->
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        /* Your existing styles */
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -153,6 +155,11 @@
                 max-width: 100%;
             }
         }
+
+        /* Language Visibility Classes */
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -161,28 +168,27 @@
     <header>
         <h1>NOATTE</h1>
         <p>
-            <span lang="en" style="display:none;">Embedded Systems Experts - Turning Ideas into Solutions</span>
+            <span lang="en" class="hidden">Embedded Systems Experts - Turning Ideas into Solutions</span>
             <span lang="sv">Experter på inbyggda system - Förvandla idéer till lösningar</span>
         </p>
 
-
         <p>
-            <span lang="en" style="display:none;">Contact us now for a free consultation</span>
+            <span lang="en" class="hidden">Contact us now for a free consultation</span>
             <span lang="sv">Kontakta oss för en gratis konsultation</span>
         </p>
-        <button onclick="switchLanguage()">Switch to English</button>
+        <!-- Added id="language-switcher" to the button -->
+        <button id="language-switcher" onclick="switchLanguage()">Switch to English</button>
     </header>
 
     <!-- About Section -->
-    <!-- About Section -->
     <section class="about">
         <h2>
-            <span lang="en" style="display:none;">About Us</span>
+            <span lang="en" class="hidden">About Us</span>
             <span lang="sv">Om oss</span>
         </h2>
         <p>
             <!-- English text -->
-            <span lang="en" style="display:none;">
+            <span lang="en" class="hidden">
                 <i>Empower Your Projects with Expert Engineering Support – On Your Terms</i></br></br>
                 At our company, we understand that finding the right engineering talent for your project can be
                 challenging,
@@ -216,14 +222,14 @@
         </p>
 
         <h3>
-            <span lang="en" style="display:none;">What Sets Us Apart:</span>
+            <span lang="en" class="hidden">What Sets Us Apart:</span>
             <span lang="sv">Vad som skiljer oss åt:</span>
         </h3>
 
         <p>
             <!-- English text -->
-            <span lang="en" style="display:none;">
-                <strong> Highly Skilled Expertise:</strong> With our background in advanced system development and niche
+            <span lang="en" class="hidden">
+                <strong>Highly Skilled Expertise:</strong> With our background in advanced system development and niche
                 technologies like radar and space systems, we deliver solutions that drive innovation and
                 efficiency.</br></br>
                 <strong>Comprehensive or Targeted Support:</strong> Need end-to-end project development? We’ve got you
@@ -249,8 +255,7 @@
 
             <!-- Swedish translation -->
             <span lang="sv">
-                <strong> Högkvalificerad expertis:</strong> Med vår bakgrund inom avancerad systemutveckling och
-                nischade
+                <strong>Högkvalificerad expertis:</strong> Med vår bakgrund inom avancerad systemutveckling och nischade
                 teknologier som radar och rymdsystem, levererar vi lösningar som driver innovation och
                 effektivitet.</br></br>
                 <strong>Omfattande eller riktat stöd:</strong> Behöver du ett heltäckande projektutveckling? Vi har det
@@ -278,11 +283,10 @@
         </p>
     </section>
 
-
     <!-- Projects Section -->
     <section class="projects">
         <h2>
-            <span lang="en" style="display:none;">History</span>
+            <span lang="en" class="hidden">History</span>
             <span lang="sv">Historia</span>
         </h2>
         <div class="projects-container">
@@ -290,12 +294,12 @@
             <div class="project">
                 <img src="gripen_e.jpeg" alt="Project 1">
                 <h3>
-                    <span lang="en" style="display:none;">Software Engineer at SAAB</span>
+                    <span lang="en" class="hidden">Software Engineer at SAAB</span>
                     <span lang="sv">Mjukvaruingenjör på SAAB</span>
                 </h3>
                 <p>
-                    <span lang="en" style="display:none;">Developed embedded C++ code for radar systems for active
-                        fighter capabilities.</span>
+                    <span lang="en" class="hidden">Developed embedded C++ code for radar systems for active fighter
+                        capabilities.</span>
                     <span lang="sv">Utvecklade inbäddad C++-kod för radarsystem för aktiva stridsflygfunktioner.</span>
                 </p>
             </div>
@@ -304,12 +308,11 @@
             <div class="project">
                 <img src="MAXUS9_launch.jpeg" alt="Project 2">
                 <h3>
-                    <span lang="en" style="display:none;">Software Engineer at Swedish Space Corporation</span>
+                    <span lang="en" class="hidden">Software Engineer at Swedish Space Corporation</span>
                     <span lang="sv">Mjukvaruingenjör på Swedish Space Corporation</span>
                 </h3>
                 <p>
-                    <span lang="en" style="display:none;">Software Engineer and hands-on with rockets and
-                        balloons.</span>
+                    <span lang="en" class="hidden">Software Engineer and hands-on with rockets and balloons.</span>
                     <span lang="sv">Mjukvaruingenjör och praktiskt arbete med raketer och ballonger.</span>
                 </p>
             </div>
@@ -318,11 +321,11 @@
             <div class="project">
                 <img src="tawi-bild-noatte.jpg" alt="Project 3">
                 <h3>
-                    <span lang="en" style="display:none;">Control System for Mobile Vacuum Lifters</span>
+                    <span lang="en" class="hidden">Control System for Mobile Vacuum Lifters</span>
                     <span lang="sv">Styrsystem för mobila vakuumlyftar</span>
                 </h3>
                 <p>
-                    <span lang="en" style="display:none;">
+                    <span lang="en" class="hidden">
                         Developed C++ code, designed PCB and electric schematics for updating the control system of a
                         vacuum-forklift. Handled communication with stakeholders and identified product requirements
                         which
@@ -350,16 +353,15 @@
             <div class="project">
                 <img src="hiss-noatte.jpg" alt="Project 4">
                 <h3>
-                    <span lang="en" style="display:none;">Control system for elevators.</span>
+                    <span lang="en" class="hidden">Control system for elevators.</span>
                     <span lang="sv">Styrsystem för hissar.</span>
                 </h3>
                 <p>
-                    <span lang="en" style="display:none;">
+                    <span lang="en" class="hidden">
                         Part of an agile team developing control systems for multiple new elevator systems.
-                        C-programming
-                        and Zephyr OS for lift functions. Automated tests for HIL-rigs using Robot Framework. Bare metal
-                        C
-                        on separate safety MCUs monitoring all safety measures in lifts following SIL2
+                        C-programming and Zephyr OS for lift functions. Automated tests for HIL-rigs using Robot
+                        Framework.
+                        Bare metal C on separate safety MCUs monitoring all safety measures in lifts following SIL2
                         requirements.</br>
                         </br>• C programming.
                         </br>• HIL development.
@@ -383,12 +385,10 @@
         </div>
     </section>
 
-
-    <!-- Team Section -->
     <!-- Team Section -->
     <section class="team">
         <h2>
-            <span lang="en" style="display:none;">Meet the Team</span>
+            <span lang="en" class="hidden">Meet the Team</span>
             <span lang="sv">Möt teamet</span>
         </h2>
         <div class="team-container">
@@ -396,11 +396,11 @@
             <div class="team-member">
                 <img src="your-photo.jpeg" alt="Your Name">
                 <h3>
-                    <span lang="en" style="display:none;">Your Name</span>
+                    <span lang="en" class="hidden">Your Name</span>
                     <span lang="sv">Ditt Namn</span>
                 </h3>
                 <p>
-                    <span lang="en" style="display:none;">A brief description of your background, experience in embedded
+                    <span lang="en" class="hidden">A brief description of your background, experience in embedded
                         systems, and what you bring to the team.</span>
                     <span lang="sv">En kort beskrivning av din bakgrund, erfarenhet inom inbyggda system och vad du
                         bidrar med till teamet.</span>
@@ -410,11 +410,11 @@
             <div class="team-member">
                 <img src="friend-photo.jpeg" alt="Friend's Name">
                 <h3>
-                    <span lang="en" style="display:none;">Friend's Name</span>
+                    <span lang="en" class="hidden">Friend's Name</span>
                     <span lang="sv">Vännens Namn</span>
                 </h3>
                 <p>
-                    <span lang="en" style="display:none;">A brief description of your friend's background, experience in
+                    <span lang="en" class="hidden">A brief description of your friend's background, experience in
                         embedded systems, and what they bring to the team.</span>
                     <span lang="sv">En kort beskrivning av din väns bakgrund, erfarenhet inom inbyggda system och vad de
                         bidrar med till teamet.</span>
@@ -426,22 +426,22 @@
     <!-- Contact Section -->
     <section class="contact">
         <h2>
-            <span lang="en" style="display:none;">Contact Us</span>
+            <span lang="en" class="hidden">Contact Us</span>
             <span lang="sv">Kontakta oss</span>
         </h2>
         <p>
-            <span lang="en" style="display:none;">If you would like to discuss how we can help with your embedded
-                systems needs, contact us for a free consultation:</span>
+            <span lang="en" class="hidden">If you would like to discuss how we can help with your embedded systems
+                needs, contact us for a free consultation:</span>
             <span lang="sv">Om du vill diskutera hur vi kan hjälpa till med dina behov av inbyggda system, kontakta oss
                 för en kostnadsfri konsultation:</span>
         </p>
         <p>
-            <span lang="en" style="display:none;">Email: <a
+            <span lang="en" class="hidden">Email: <a
                     href="mailto:your-email@example.com">your-email@example.com</a></span>
             <span lang="sv">E-post: <a href="mailto:your-email@example.com">your-email@example.com</a></span>
         </p>
         <a href="mailto:your-email@example.com" class="button">
-            <span lang="en" style="display:none;">Get a Free Consultation</span>
+            <span lang="en" class="hidden">Get a Free Consultation</span>
             <span lang="sv">Få en kostnadsfri konsultation</span>
         </a>
     </section>
@@ -449,49 +449,58 @@
     <!-- Footer -->
     <footer>
         <p>
-            <span lang="en" style="display:none;">&copy; 2024 Your Consulting Company</span>
+            <span lang="en" class="hidden">&copy; 2024 Your Consulting Company</span>
             <span lang="sv">&copy; 2024 Ditt Konsultföretag</span>
         </p>
     </footer>
 
+    <!-- Place the script just before the closing body tag -->
     <script>
+        // Set the default language to Swedish
+        var currentLanguage = 'sv';
+
         function switchLanguage() {
-            // Get all elements with the 'lang' attribute set to 'en' and 'sv'
-            var englishTexts = document.querySelectorAll('[lang="en"]');
-            var swedishTexts = document.querySelectorAll('[lang="sv"]');
+            console.log('switchLanguage function called');
+            console.log('Current Language:', currentLanguage);
 
-            // Check the current button text to decide which language to switch to
-            var button = document.querySelector('button');
-            var switchToSwedish = button.innerHTML.includes('Switch to Swedish');
+            // Modify selectors to only select elements within the <body>
+            var englishTexts = document.querySelectorAll('body [lang="en"]');
+            var swedishTexts = document.querySelectorAll('body [lang="sv"]');
+            var button = document.getElementById('language-switcher');
 
-            if (switchToSwedish) {
-                // Switch to Swedish
-                englishTexts.forEach(function (el) {
-                    el.style.display = 'none';
-                });
-                swedishTexts.forEach(function (el) {
-                    el.style.display = 'inline'; // Use 'inline' for inline elements
-                });
+            // Check if button is found
+            if (!button) {
+                console.error('Button with id "language-switcher" not found.');
+                return;
+            }
 
-                // Update button text
-                button.innerHTML = 'Switch to English';
-            } else {
+            if (currentLanguage === 'sv') {
+                console.log('Switching to English');
                 // Switch to English
                 englishTexts.forEach(function (el) {
-                    el.style.display = 'inline';
+                    el.classList.remove('hidden');
                 });
                 swedishTexts.forEach(function (el) {
-                    el.style.display = 'none';
+                    el.classList.add('hidden');
                 });
-
-                // Update button text
                 button.innerHTML = 'Switch to Swedish';
+                currentLanguage = 'en';
+            } else {
+                console.log('Switching to Swedish');
+                // Switch to Swedish
+                englishTexts.forEach(function (el) {
+                    el.classList.add('hidden');
+                });
+                swedishTexts.forEach(function (el) {
+                    el.classList.remove('hidden');
+                });
+                button.innerHTML = 'Switch to English';
+                currentLanguage = 'sv';
             }
+
+            console.log('Language after switch:', currentLanguage);
         }
     </script>
-
-
-
 
 </body>
 
