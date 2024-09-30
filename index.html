@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv"> <!-- Changed lang="en" to lang="sv" -->
+<html lang="sv"> <!-- Set the default language to Swedish -->
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Your existing styles */
+        /* Existing styles */
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -19,6 +19,27 @@
             line-height: 1.6;
         }
 
+        /* Positioning the language switcher button */
+        #language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+            /* Ensure the button stays on top */
+        }
+
+        #language-switcher:hover {
+            background-color: #0056b3;
+        }
+
         header {
             background-color: #007bff;
             color: #fff;
@@ -26,6 +47,8 @@
             text-align: center;
             background: linear-gradient(135deg, #007bff, #0056b3);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* To contain the absolute positioning of the button if needed */
         }
 
         header h1 {
@@ -154,6 +177,14 @@
             .team-member {
                 max-width: 100%;
             }
+
+            /* Adjust language switcher position */
+            #language-switcher {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
         }
 
         /* Language Visibility Classes */
@@ -164,6 +195,8 @@
 </head>
 
 <body>
+    <!-- Moved the language switcher button to the top inside the body -->
+    <button id="language-switcher" onclick="switchLanguage()">EN</button>
 
     <header>
         <h1>NOATTE</h1>
@@ -176,8 +209,6 @@
             <span lang="en" class="hidden">Contact us now for a free consultation</span>
             <span lang="sv">Kontakta oss för en gratis konsultation</span>
         </p>
-        <!-- Added id="language-switcher" to the button -->
-        <button id="language-switcher" onclick="switchLanguage()">Switch to English</button>
     </header>
 
     <!-- About Section -->
@@ -353,15 +384,15 @@
             <div class="project">
                 <img src="hiss-noatte.jpg" alt="Project 4">
                 <h3>
-                    <span lang="en" class="hidden">Control system for elevators.</span>
-                    <span lang="sv">Styrsystem för hissar.</span>
+                    <span lang="en" class="hidden">Control System for Elevators</span>
+                    <span lang="sv">Styrsystem för hissar</span>
                 </h3>
                 <p>
                     <span lang="en" class="hidden">
                         Part of an agile team developing control systems for multiple new elevator systems.
-                        C-programming and Zephyr OS for lift functions. Automated tests for HIL-rigs using Robot
-                        Framework.
-                        Bare metal C on separate safety MCUs monitoring all safety measures in lifts following SIL2
+                        C-programming
+                        and Zephyr OS for lift functions. Automated tests for HIL-rigs using Robot Framework. Bare metal
+                        C on separate safety MCUs monitoring all safety measures in lifts following SIL2
                         requirements.</br>
                         </br>• C programming.
                         </br>• HIL development.
@@ -463,7 +494,6 @@
             console.log('switchLanguage function called');
             console.log('Current Language:', currentLanguage);
 
-            // Modify selectors to only select elements within the <body>
             var englishTexts = document.querySelectorAll('body [lang="en"]');
             var swedishTexts = document.querySelectorAll('body [lang="sv"]');
             var button = document.getElementById('language-switcher');
@@ -483,7 +513,7 @@
                 swedishTexts.forEach(function (el) {
                     el.classList.add('hidden');
                 });
-                button.innerHTML = 'Switch to Swedish';
+                button.innerHTML = 'SE'; // Change button text to 'SE'
                 currentLanguage = 'en';
             } else {
                 console.log('Switching to Swedish');
@@ -494,7 +524,7 @@
                 swedishTexts.forEach(function (el) {
                     el.classList.remove('hidden');
                 });
-                button.innerHTML = 'Switch to English';
+                button.innerHTML = 'EN'; // Change button text to 'EN'
                 currentLanguage = 'sv';
             }
 
