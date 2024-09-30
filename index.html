@@ -454,6 +454,45 @@
         </p>
     </footer>
 
+    <script>
+        function switchLanguage() {
+            // Get all elements with the 'lang' attribute set to 'en' and 'sv'
+            var englishTexts = document.querySelectorAll('[lang="en"]');
+            var swedishTexts = document.querySelectorAll('[lang="sv"]');
+
+            // Check the current button text to decide which language to switch to
+            var button = document.querySelector('button');
+            var switchToSwedish = button.innerHTML.includes('Switch to Swedish');
+
+            if (switchToSwedish) {
+                // Switch to Swedish
+                englishTexts.forEach(function (el) {
+                    el.style.display = 'none';
+                });
+                swedishTexts.forEach(function (el) {
+                    el.style.display = 'inline'; // Use 'inline' for inline elements
+                });
+
+                // Update button text
+                button.innerHTML = 'Switch to English';
+            } else {
+                // Switch to English
+                englishTexts.forEach(function (el) {
+                    el.style.display = 'inline';
+                });
+                swedishTexts.forEach(function (el) {
+                    el.style.display = 'none';
+                });
+
+                // Update button text
+                button.innerHTML = 'Switch to Swedish';
+            }
+        }
+    </script>
+
+
+
+
 </body>
 
 </html>
