@@ -41,24 +41,57 @@
         }
 
         header {
-            background-color: #007bff;
+            /* Removed the existing background color and gradient */
+            /* background-color: #007bff; */
+            /* background: linear-gradient(135deg, #007bff, #0056b3); */
+
+            /* Added the background image */
+            background-image: url('data-gif-2.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
             color: #fff;
-            padding: 50px 20px;
+            padding: 100px 20px;
+            /* Increased padding for better spacing */
             text-align: center;
-            background: linear-gradient(135deg, #007bff, #0056b3);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
-            /* To contain the absolute positioning of the button if needed */
+            /* To contain the absolute positioning of the overlay */
+        }
+
+        /* Optional overlay for better text readability */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Adjust opacity as needed */
+            z-index: 1;
+        }
+
+        /* Ensure the header content appears above the overlay */
+        header h1,
+        header p {
+            position: relative;
+            z-index: 2;
         }
 
         header h1 {
             font-size: 3em;
             margin-bottom: 0.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            /* Text shadow for better readability */
         }
 
         header p {
             font-size: 1.5em;
             margin-top: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            /* Text shadow for better readability */
         }
 
         section {
@@ -75,12 +108,13 @@
         }
 
         .about,
+        .services,
         .contact {
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             padding: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 1px;
         }
 
         .projects-container,
@@ -199,7 +233,7 @@
     <button id="language-switcher" onclick="switchLanguage()">EN</button>
 
     <header>
-        <h1>NOATTE</h1>
+        <h1>LINDÉN MULOLLI</h1>
         <p>
             <span lang="en" class="hidden">Embedded Systems Experts - Turning Ideas into Solutions</span>
             <span lang="sv">Experter på inbyggda system - Förvandla idéer till lösningar</span>
@@ -211,105 +245,29 @@
         </p>
     </header>
 
-    <!-- About Section -->
-    <section class="about">
+    <!-- Our services Section -->
+    <section class="services">
         <h2>
-            <span lang="en" class="hidden">About Us</span>
-            <span lang="sv">Om oss</span>
+            <span lang="en" class="hidden">Our Services</span>
+            <span lang="sv">Våra tjänster</span>
         </h2>
         <p>
             <!-- English text -->
             <span lang="en" class="hidden">
-                <i>Empower Your Projects with Expert Engineering Support – On Your Terms</i></br></br>
-                At our company, we understand that finding the right engineering talent for your project can be
-                challenging,
-                especially when you don't need full-time support. That’s where we step in. With extensive experience
-                from
-                some of Sweden's most technologically advanced companies like Saab and ES-range, we offer part-time
-                access
-                to top experts in embedded systems, automation, and electrical engineering.</br></br>
-                Whether you need full project execution from concept to completion or just support with specific phases,
-                our
-                services are flexible to match your needs. We can help you develop a new product from idea to prototype
-                and
-                even support mass production—or simply assist with certain tasks in your ongoing project.</br>
+                Do you have a system that needs updating or connecting? Do you need to produce a prototype?
+
+                Now you can get support from the same people who work at Saab and the Swedish Space Corporation. Lindén
+                and Mulolli have several years of experience developing embedded systems and have expertise in both
+                smaller and larger, more complex systems.
             </span>
 
             <!-- Swedish translation -->
             <span lang="sv">
-                <i>Stärk dina projekt med expertstöd inom ingenjörsteknik – på dina villkor</i></br></br>
-                På vårt företag förstår vi att det kan vara utmanande att hitta rätt ingenjörskompetens för ditt
-                projekt,
-                särskilt när du inte behöver heltidsstöd. Det är här vi kommer in. Med omfattande erfarenhet från några
-                av
-                Sveriges mest tekniskt avancerade företag som Saab och ES-range, erbjuder vi deltidsåtkomst till
-                experter
-                inom inbyggda system, automation och elektroteknik.</br></br>
-                Oavsett om du behöver fullständigt projektexekvering från idé till färdig produkt eller bara stöd med
-                specifika faser, är våra tjänster flexibla för att möta dina behov. Vi kan hjälpa dig att utveckla en ny
-                produkt från idé till prototyp och till och med stödja massproduktion—eller helt enkelt bistå med vissa
-                uppgifter i ditt pågående projekt.</br>
-            </span>
-        </p>
+                Har ni ett system som behöver uppdateras eller kopplas upp? Behöver ni producera en prototyp?
 
-        <h3>
-            <span lang="en" class="hidden">What Sets Us Apart:</span>
-            <span lang="sv">Vad som skiljer oss åt:</span>
-        </h3>
-
-        <p>
-            <!-- English text -->
-            <span lang="en" class="hidden">
-                <strong>Highly Skilled Expertise:</strong> With our background in advanced system development and niche
-                technologies like radar and space systems, we deliver solutions that drive innovation and
-                efficiency.</br></br>
-                <strong>Comprehensive or Targeted Support:</strong> Need end-to-end project development? We’ve got you
-                covered—from initial design to a working prototype, all the way to mass production. Or perhaps you just
-                need
-                help solving a specific technical challenge or updating a part of your system? We're ready to jump in
-                wherever
-                you need us most.</br></br>
-                <strong>Cost-Effective, Part-Time Services:</strong> Get access to top engineering talent without the
-                commitment and expense of full-time hires. Our flexible, part-time model allows you to get the expert
-                support
-                you need only when and as you need it, making your development process more efficient and
-                affordable.</br></br>
-                <strong>Flexibility & Speed:</strong> Our team is available during afternoons, evenings, and weekends,
-                offering faster turnaround times for your short-term or urgent projects without compromising
-                quality.</br></br>
-                By partnering with us, you get the unique advantage of integrating highly qualified professionals into
-                your
-                team seamlessly, whether for a small boost on a project or managing the entire development process—all
-                without
-                the need for a full-time commitment.</br>
-            </span>
-
-            <!-- Swedish translation -->
-            <span lang="sv">
-                <strong>Högkvalificerad expertis:</strong> Med vår bakgrund inom avancerad systemutveckling och nischade
-                teknologier som radar och rymdsystem, levererar vi lösningar som driver innovation och
-                effektivitet.</br></br>
-                <strong>Omfattande eller riktat stöd:</strong> Behöver du ett heltäckande projektutveckling? Vi har det
-                du
-                behöver—från första design till fungerande prototyp, ända fram till massproduktion. Eller kanske behöver
-                du
-                bara hjälp med att lösa en specifik teknisk utmaning eller uppdatera en del av ditt system? Vi är redo
-                att
-                hoppa in där du behöver oss mest.</br></br>
-                <strong>Kostnadseffektiva deltidsstjänster:</strong> Få tillgång till topptalang inom ingenjörsyrket
-                utan
-                kostnaden och åtagandet av heltidsanställningar. Vår flexibla deltidsmodell gör att du kan få det
-                expertstöd
-                du behöver, endast när och hur du behöver det, vilket gör din utvecklingsprocess mer effektiv och
-                prisvärd.</br></br>
-                <strong>Flexibilitet & Snabbhet:</strong> Vårt team är tillgängligt under eftermiddagar, kvällar och
-                helger,
-                vilket ger snabbare leveranstider för dina kortsiktiga eller brådskande projekt utan att kompromissa med
-                kvaliteten.</br></br>
-                Genom att samarbeta med oss får du den unika fördelen av att integrera högkvalificerade yrkesmän i ditt
-                team
-                sömlöst, oavsett om det är för en mindre förstärkning i ett projekt eller för att hantera hela
-                utvecklingsprocessen—allt utan behov av en heltidsanställning.</br>
+                Nu kan ni få stöd av samma personer som arbetar på Saab och Swedish Space Corporation. Lindén och
+                Mulolli har flera års erfarenhet av att utveckla inbyggda system och har kunskap om både mindre och
+                större, mer komplexa system.
             </span>
         </p>
     </section>
@@ -359,23 +317,22 @@
                     <span lang="en" class="hidden">
                         Developed C++ code, designed PCB and electric schematics for updating the control system of a
                         vacuum-forklift. Handled communication with stakeholders and identified product requirements
-                        which
-                        were then broken down to user stories used during development.</br>
-                        </br>• C++ programming.
-                        </br>• Circuit and PCB design in Fusion360.
-                        </br>• Co-managed the project, planned sprints, set goals.
-                        </br>• Managed communication with clients and identified product specifications.
-                        </br>• SPI, I2C, Git, Fusion360, Linux, Jira, Confluence
+                        which were then broken down to user stories used during development.<br>
+                        <br>• C++ programming.
+                        <br>• Circuit and PCB design in Fusion360.
+                        <br>• Co-managed the project, planned sprints, set goals.
+                        <br>• Managed communication with clients and identified product specifications.
+                        <br>• SPI, I2C, Git, Fusion360, Linux, Jira, Confluence
                     </span>
                     <span lang="sv">
                         Utvecklade C++-kod, designade PCB och elektriska scheman för att uppdatera styrsystemet för en
                         vakuumgaffeltruck. Hanterade kommunikation med intressenter och identifierade produktkrav som
-                        sedan bröts ner till användarberättelser under utvecklingen.</br>
-                        </br>• C++ programmering.
-                        </br>• Krets- och PCB-design i Fusion360.
-                        </br>• Medledde projektet, planerade sprintar, satte mål.
-                        </br>• Hanterade kommunikation med kunder och identifierade produktspecifikationer.
-                        </br>• SPI, I2C, Git, Fusion360, Linux, Jira, Confluence
+                        sedan bröts ner till användarberättelser under utvecklingen.<br>
+                        <br>• C++ programmering.
+                        <br>• Krets- och PCB-design i Fusion360.
+                        <br>• Medledde projektet, planerade sprintar, satte mål.
+                        <br>• Hanterade kommunikation med kunder och identifierade produktspecifikationer.
+                        <br>• SPI, I2C, Git, Fusion360, Linux, Jira, Confluence
                     </span>
                 </p>
             </div>
@@ -390,31 +347,130 @@
                 <p>
                     <span lang="en" class="hidden">
                         Part of an agile team developing control systems for multiple new elevator systems.
-                        C-programming
-                        and Zephyr OS for lift functions. Automated tests for HIL-rigs using Robot Framework. Bare metal
-                        C on separate safety MCUs monitoring all safety measures in lifts following SIL2
-                        requirements.</br>
-                        </br>• C programming.
-                        </br>• HIL development.
-                        </br>• Automated tests with Robot Framework.
-                        </br>• Modbus, I2C, SPI, UART, Zephyr RTOS, Bare metal, Linux, Git, Jira, Confluence
+                        C-programming and Zephyr OS for lift functions. Automated tests for HIL-rigs using Robot
+                        Framework. Bare metal C on separate safety MCUs monitoring all safety measures in lifts
+                        following SIL2 requirements.<br>
+                        <br>• C programming.
+                        <br>• HIL development.
+                        <br>• Automated tests with Robot Framework.
+                        <br>• Modbus, I2C, SPI, UART, Zephyr RTOS, Bare metal, Linux, Git, Jira, Confluence
                     </span>
                     <span lang="sv">
                         Del av ett agilt team som utvecklade styrsystem för flera nya hissystem. C-programmering och
-                        Zephyr
-                        OS för hissfunktioner. Automatiserade tester för HIL-riggar med hjälp av Robot Framework. Bare
-                        metal
-                        C på separata säkerhets-MCU:er som övervakar alla säkerhetsåtgärder i hissar enligt
-                        SIL2-krav.</br>
-                        </br>• C-programmering.
-                        </br>• HIL-utveckling.
-                        </br>• Automatiserade tester med Robot Framework.
-                        </br>• Modbus, I2C, SPI, UART, Zephyr RTOS, Bare metal, Linux, Git, Jira, Confluence
+                        Zephyr OS för hissfunktioner. Automatiserade tester för HIL-riggar med hjälp av Robot Framework.
+                        Bare metal C på separata säkerhets-MCU:er som övervakar alla säkerhetsåtgärder i hissar enligt
+                        SIL2-krav.<br>
+                        <br>• C-programmering.
+                        <br>• HIL-utveckling.
+                        <br>• Automatiserade tester med Robot Framework.
+                        <br>• Modbus, I2C, SPI, UART, Zephyr RTOS, Bare metal, Linux, Git, Jira, Confluence
                     </span>
                 </p>
             </div>
         </div>
     </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>
+            <span lang="en" class="hidden">About Us</span>
+            <span lang="sv">Om oss</span>
+        </h2>
+        <p>
+            <!-- English text -->
+            <span lang="en" class="hidden">
+                <i>Empower Your Projects with Expert Engineering Support – On Your Terms</i><br><br>
+                At our company, we understand that finding the right engineering talent for your project can be
+                challenging,
+                especially when you don't need full-time support. That’s where we step in. With extensive experience
+                from
+                some of Sweden's most technologically advanced companies like Saab and ES-range, we offer part-time
+                access
+                to top experts in embedded systems, automation, and electrical engineering.<br><br>
+                Whether you need full project execution from concept to completion or just support with specific phases,
+                our
+                services are flexible to match your needs. We can help you develop a new product from idea to prototype
+                and
+                even support mass production—or simply assist with certain tasks in your ongoing project.<br>
+            </span>
+
+            <!-- Swedish translation -->
+            <span lang="sv">
+                <i>Stärk dina projekt med expertstöd inom ingenjörsteknik – på dina villkor</i><br><br>
+                På vårt företag förstår vi att det kan vara utmanande att hitta rätt ingenjörskompetens för ditt
+                projekt,
+                särskilt när du inte behöver heltidsstöd. Det är här vi kommer in. Med omfattande erfarenhet från några
+                av
+                Sveriges mest tekniskt avancerade företag som Saab och ES-range, erbjuder vi deltidsåtkomst till
+                experter
+                inom inbyggda system, automation och elektroteknik.<br><br>
+                Oavsett om du behöver fullständigt projektexekvering från idé till färdig produkt eller bara stöd med
+                specifika faser, är våra tjänster flexibla för att möta dina behov. Vi kan hjälpa dig att utveckla en ny
+                produkt från idé till prototyp och till och med stödja massproduktion—eller helt enkelt bistå med vissa
+                uppgifter i ditt pågående projekt.<br>
+            </span>
+        </p>
+
+        <h3>
+            <span lang="en" class="hidden">What Sets Us Apart:</span>
+            <span lang="sv">Vad som skiljer oss åt:</span>
+        </h3>
+
+        <p>
+            <!-- English text -->
+            <span lang="en" class="hidden">
+                <strong>Highly Skilled Expertise:</strong> With our background in advanced system development, we
+                deliver solutions that drive innovation and efficiency.<br><br>
+                <strong>Comprehensive or Targeted Support:</strong> Need end-to-end project development? We’ve got you
+                covered—from initial design to a working prototype, all the way to mass production. Or perhaps you just
+                need
+                help solving a specific technical challenge or updating a part of your system? We're ready to jump in
+                wherever
+                you need us most.<br><br>
+                <strong>Cost-Effective, Part-Time Services:</strong> Get access to top engineering talent without the
+                commitment and expense of full-time hires. Our flexible, part-time model allows you to get the expert
+                support
+                you need only when and as you need it, making your development process more efficient and
+                affordable.<br><br>
+                <strong>Flexibility & Speed:</strong> Our team is available during afternoons, evenings, and weekends,
+                offering faster turnaround times for your short-term or urgent projects without compromising
+                quality.<br><br>
+                By partnering with us, you get the unique advantage of integrating highly qualified professionals into
+                your
+                team seamlessly, whether for a small boost on a project or managing the entire development process—all
+                without
+                the need for a full-time commitment.<br>
+            </span>
+
+            <!-- Swedish translation -->
+            <span lang="sv">
+                <strong>Högkvalificerad expertis:</strong> Med vår bakgrund inom avancerad systemutveckling och
+                nischade, levererar vi lösningar som driver innovation och effektivitet.<br><br>
+                <strong>Omfattande eller riktat stöd:</strong> Behöver du ett heltäckande projektutveckling? Vi har det
+                du
+                behöver—från första design till fungerande prototyp, ända fram till massproduktion. Eller kanske behöver
+                du
+                bara hjälp med att lösa en specifik teknisk utmaning eller uppdatera en del av ditt system? Vi är redo
+                att
+                hoppa in där du behöver oss mest.<br><br>
+                <strong>Kostnadseffektiva deltidsstjänster:</strong> Få tillgång till topptalang inom ingenjörsyrket
+                utan
+                kostnaden och åtagandet av heltidsanställningar. Vår flexibla deltidsmodell gör att du kan få det
+                expertstöd
+                du behöver, endast när och hur du behöver det, vilket gör din utvecklingsprocess mer effektiv och
+                prisvärd.<br><br>
+                <strong>Flexibilitet & Snabbhet:</strong> Vårt team är tillgängligt under eftermiddagar, kvällar och
+                helger,
+                vilket ger snabbare leveranstider för dina kortsiktiga eller brådskande projekt utan att kompromissa med
+                kvaliteten.<br><br>
+                Genom att samarbeta med oss får du den unika fördelen av att integrera högkvalificerade yrkesmän i ditt
+                team
+                sömlöst, oavsett om det är för en mindre förstärkning i ett projekt eller för att hantera hela
+                utvecklingsprocessen—allt utan behov av en heltidsanställning.<br>
+            </span>
+        </p>
+    </section>
+
 
     <!-- Team Section -->
     <section class="team">
@@ -427,28 +483,34 @@
             <div class="team-member">
                 <img src="your-photo.jpeg" alt="Your Name">
                 <h3>
-                    <span lang="en" class="hidden">Your Name</span>
-                    <span lang="sv">Ditt Namn</span>
+                    <span lang="en" class="hidden">Atdhe Mulolli</span>
+                    <span lang="sv">Atdhe Mulolli</span>
                 </h3>
                 <p>
-                    <span lang="en" class="hidden">A brief description of your background, experience in embedded
-                        systems, and what you bring to the team.</span>
-                    <span lang="sv">En kort beskrivning av din bakgrund, erfarenhet inom inbyggda system och vad du
-                        bidrar med till teamet.</span>
+                    <span lang="en" class="hidden">Studied Electrical Engineering at Chalmers University of Technology.
+                        Three years of professional experience in Embedded Engineering. Developed radar systems for
+                        fighter jets, managed and developed control systems for mobile vacuum lifters, and developed
+                        control systems for elevators.</span>
+                    <span lang="sv">Studerade elektroteknik vid Chalmers tekniska högskola. Tre års professionell
+                        erfarenhet inom inbyggda system. Utvecklade radarsystem för stridsflygplan, ansvarade för och
+                        utvecklade styrsystem för mobila vakuumlyftare samt utvecklade styrsystem för hissar.</span>
                 </p>
             </div>
             <!-- Team Member 2 -->
             <div class="team-member">
                 <img src="friend-photo.jpeg" alt="Friend's Name">
                 <h3>
-                    <span lang="en" class="hidden">Friend's Name</span>
-                    <span lang="sv">Vännens Namn</span>
+                    <span lang="en" class="hidden">Noa Lindén</span>
+                    <span lang="sv">Noa Lindén</span>
                 </h3>
                 <p>
-                    <span lang="en" class="hidden">A brief description of your friend's background, experience in
-                        embedded systems, and what they bring to the team.</span>
-                    <span lang="sv">En kort beskrivning av din väns bakgrund, erfarenhet inom inbyggda system och vad de
-                        bidrar med till teamet.</span>
+                    <span lang="en" class="hidden">Studied Systems, Control and Mechatronics at Chalmers Unitversity of
+                        Technology. Three years professional experience in Embedded Engineering. Software Engineer at
+                        Swedish Space Corporation, developed control systems for mobile vacuum lifters, and developed
+                        control systems for elevators.</span>
+                    <span lang="sv">Studerade System, reglerteknik och mekatronik vid Chalmers tekniska högskola. Tre
+                        års professionell erfarenhet inom inbyggda system. Utvecklade radarsystem för stridsflygplan,
+                        utvecklade styrsystem för mobila vakuumlyftare samt utvecklade styrsystem för hissar.</span>
                 </p>
             </div>
         </div>
